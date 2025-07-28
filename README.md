@@ -122,23 +122,16 @@ print(qa_table)
 
 ## Screenshots or Diagrams
 
-*Optional: Add screenshots or diagrams here to illustrate workflow or outputs.*
+*Under Construction*
 
 ---
 
-## License Information
+## License
 
-This project is licensed under the **MIT License**.  
-See the [LICENSE](LICENSE) file for details.
+Licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for more information.
 
----
+## Contact
 
-## Contact Information
-
-For questions, support, or contributions, please contact:
-
-- **Project Maintainer:** Your Name  
-- **Email:** your.email@domain.com  
-- **GitHub Issues:** [https://github.com/yourusername/llm-structured-response-toolkit/issues](https://github.com/yourusername/llm-structured-response-toolkit/issues)
+Feel free to reach out at [Vahedi.john@columbia.edu](mailto:Vahedi.john@columbia.edu) for queries or support.
 
 ---
