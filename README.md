@@ -12,17 +12,22 @@ A Python package for **structured, robust, and scalable interaction with Large L
 - **Structured Output Validation:**  
   Enforce and validate JSON schema for LLM responses using Pydantic models.
 
-- **Batch Embedding Utilities:**  
-  Generate and process text embeddings in bulk from both GPT and OLLAMA models.
-
 - **Tabular Data Processing:**  
-  Convert unstructured LLM outputs into structured pandas DataFrames, with support for voting, aggregation, and error handling.
+  Convert unstructured LLM outputs into structured pandas DataFrames, .
 
 - **Automated Retry and Error Handling:**  
-  Built-in retry logic for robust API calls and validation.
+  Built-in retry logic for robust API calls and validation inluding error handling
+
+- **Voting and Aggregation:**
+  Support for odd number voting via high temprature voter exploration, subsequent aggregation, table highlighting for disagreement. 
 
 - **Customizable Prompting and Schema:**  
   Easily define custom instructions and output formats for a wide range of tasks.
+  
+___
+
+- **Batch Embedding Utilities:**  
+  Generate and process text embeddings in bulk from both GPT and OLLAMA models.
 
 ---
 
