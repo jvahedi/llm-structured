@@ -1,68 +1,69 @@
 # LLM Structured Response Toolkit
 
-A Python package for **structured, robust, and scalable interaction with Large Language Models (LLMs)**, including OpenAI GPT (via Azure) and local OLLAMA models. This toolkit enables users to send prompts, receive structured responses, validate outputs, and process results into tabular formats for downstream analysis.
+A Python package for **structured, robust, and scalable interaction with Large Language Models (LLMs)**, including OpenAI GPT (via Azure) and local OLLAMA models. This toolkit enables users to send prompts, receive validated structured responses, and process outputs into tabular formats for downstream analysis.
 
 ---
 
 ## Features
 
-- **Unified LLM Interface:**  
+* **Unified LLM Interface**
   Seamlessly interact with both cloud-based (OpenAI/Azure) and local (OLLAMA) LLMs using a consistent API.
 
-- **Structured Output Validation:**  
-  Enforce and validate JSON schema for LLM responses using Pydantic models.
+* **Structured Output Validation**
+  Enforce and validate JSON-style responses using Pydantic models.
 
-- **Tabular Data Processing:**  
-  Convert unstructured LLM outputs into structured pandas DataFrames, .
+* **Tabular Data Processing**
+  Convert unstructured LLM outputs into structured `pandas` DataFrames for easy analysis.
 
-- **Automated Retry and Error Handling:**  
-  Built-in retry logic for robust API calls and validation inluding error handling
+* **Automated Retry and Error Handling**
+  Robust built-in retry logic with error handling for API calls and validation.
 
-- **Voting and Aggregation:**
-  Support for odd number voting via high temprature voter exploration, subsequent aggregation, table highlighting for disagreement. 
+* **Voting and Aggregation**
+  Support for odd-number voting via high-temperature sampling, with downstream aggregation and table highlighting for disagreement resolution.
 
-- **Customizable Prompting and Schema:**  
-  Easily define custom instructions and output formats for a wide range of tasks.
-  
-___
+* **Customizable Prompting and Schema**
+  Define custom instructions and output formats tailored to a wide range of tasks.
 
-- **Batch Embedding Utilities:**  
-  Generate and process text embeddings in bulk from both GPT and OLLAMA models.
+* **Batch Embedding Utilities**
+  Generate and process text embeddings in bulk using GPT or OLLAMA models.
 
 ---
 
-## Installation Instructions
+## Installation
 
-1. **Clone the repository:**
+1. **Clone the repository**
+
    ```bash
    git clone https://github.com/yourusername/llm-structured-response-toolkit.git
    cd llm-structured-response-toolkit
    ```
 
-2. **Install dependencies:**
+2. **Install dependencies**
+
    ```bash
    pip install -r requirements.txt
    ```
 
-   *Typical dependencies include:*
-   - `openai`
-   - `ollama`
-   - `tenacity`
-   - `pandas`
-   - `numpy`
-   - `pydantic`
-   - `tqdm`
-   - `requests`
-   - `regex`
+   *Key dependencies include:*
 
-3. **(Optional) Set up OLLAMA for local LLM inference:**  
-   See [OLLAMA documentation](https://ollama.com/) for installation and model setup.
+   * `openai`
+   * `ollama`
+   * `tenacity`
+   * `pandas`
+   * `numpy`
+   * `pydantic`
+   * `tqdm`
+   * `requests`
+   * `regex`
+
+3. **(Optional) Set up OLLAMA for local inference**
+   See the [OLLAMA documentation](https://ollama.com/) for installation and model setup.
 
 ---
 
-## Basic Usage
+## Usage
 
-### 1. Sending a Prompt and Getting a Structured Response
+### 1. Send a Prompt and Receive a Structured Response
 
 ```python
 from respond import Respond
@@ -73,22 +74,21 @@ result = Respond(prompt, context, model='4om')
 print(result)
 ```
 
-### 2. Embedding Text
+### 2. Embed Text
 
 ```python
 from embed import gptEmbed, olmEmbed
 
 texts = ["This is a test.", "Another sentence."]
 embeddings = gptEmbed(texts)
-# or for OLLAMA
+# or using OLLAMA:
 embeddings_ollama = olmEmbed(texts)
 ```
 
-### 3. Structuring Unstructured Data
+### 3. Extract Structured Data from Text
 
 ```python
 from structure import Structure, collapse
-
 import pandas as pd
 
 unstructured_text = pd.Series([
@@ -107,7 +107,7 @@ df = collapse(Outcomes, format_dict, unstructured_text)
 print(df)
 ```
 
-### 4. Validating and Processing QA Tasks
+### 4. Validate and Process QA Tasks
 
 ```python
 from validate import qaProcess
@@ -125,18 +125,23 @@ print(qa_table)
 
 ---
 
-## Screenshots or Diagrams
+## Visuals
 
-*Under Construction*
+**Screenshots and diagrams coming soon.**
 
 ---
 
 ## License
 
-Licensed under the Apache License, Version 2.0. See the [LICENSE](LICENSE) file for more information.
+Licensed under the Apache License, Version 2.0.
+See the [LICENSE](LICENSE) file for full terms.
+
+---
 
 ## Contact
 
-Feel free to reach out at [Vahedi.john@columbia.edu](mailto:Vahedi.john@columbia.edu) for queries or support.
+For questions or support, contact [vahedi.john@columbia.edu](mailto:vahedi.john@columbia.edu).
 
 ---
+
+Let me know if you want a `docx` or markdown file of this, or want to generate a GitHub-friendly `README.md` with badges and a table of contents.
