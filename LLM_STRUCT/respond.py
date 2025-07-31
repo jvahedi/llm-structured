@@ -12,7 +12,7 @@ from tenacity import (
     wait_exponential     # Exponential backoff for retries
 )
 
-gpt_250 = 'fd141762ad904a91b170781fcb428b04'  # GPT-4 enabled API key
+gpt_250 = '********************************'  # GPT-4 enabled API key
 
 def endUrl(deployment, api,
            base='https://apigw.rand.org/openai/RAND/inference/deployments/', 
